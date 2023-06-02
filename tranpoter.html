@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>TRANSPOTER Form</title>
+<script LANGUAGE="JavaScript" type="text/javascript">
+function display() {
+  DispWin = window.open('','_self', 'toolbar=no,status=no,width=300,height=200')
+  message = "<ul><li><b>ORDER ID: </b>" + document.form1.orderid.value;
+  message += "<li><b>PRICE: </b>" + document.form1.price.value+"</ul>";
+  DispWin.document.write(message);
+}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+    background:linear-gradient(wheat,aqua,violet,grey);
+    color: black;
+}
+</style>
+</head>
+<body>
+<h1>Transpoter Form</h1>
+
+<form name="form1" action="man.html">
+<p><b>Order ID:</b> <input type="text" pattern="^[A-Za-z][A-Za-z0-9!@#$%^&* ]*$" NAME="orderid" placeholder="XB120">
+</p>
+
+<p><b>PRICE:</b> <input TYPE="float" SIZE="20" NAME="price" formtarget="_blank">
+<p><input TYPE="BUTTON" VALUE="Reply" onClick="display();"></p>
+</form>
+<a href="remove.html"><button>Back To Home</button></a>
+</body>
+</html>
+

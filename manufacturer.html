@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Form Example</title>
+<script LANGUAGE="JavaScript" type="text/javascript">
+function display() {
+  DispWin = window.open('','_self', 'toolbar=no,status=no,width=300,height=200')
+  message = "<ul><li><b>ORDER ID: </b>" + document.form1.orderid.value;
+  message += "<li><b>TO: </b>" + document.form1.toaddress.value;
+  message += "<li><b>FROM: </b>" + document.form1.fromaddress.value;
+message += "<li><b>QUANTITY: </b>" + document.form1.quantity.value;
+  message += "<li><b>ADDRESS: </b>" + document.form1.address.value; 
+message += "<li><b>TRANSPOTER: </b>" + document.form1.transpoter.value+"</ul>";
+  DispWin.document.write(message);
+}
+</script>
+<style>
+body{
+    background:linear-gradient(wheat,aqua,violet,grey);
+    color: black;
+}
+}
+</style>
+</head>
+<body>
+<h1>Manufacturer Form</h1>
+
+<form name="form1">
+<p><b>Order ID:</b> <input type="text" pattern="^[A-Za-z][A-Za-z0-9!@#$%^&* ]*$" NAME="orderid" placeholder="XB120">
+</p>
+
+<p><b>TO:</b> <input TYPE="TEXT" SIZE="20" NAME="toaddress">
+</p>
+<p><b>FROM:</b> <input TYPE="TEXT" SIZE="20" NAME="fromaddress">
+</p>
+<p><b> QUANTITY:</b> 
+<label for=""></label>
+  <select id="" NAME="DFG">
+    <option value="1">1 TON</option>
+    <option value="2">2 TON</option>
+    <option value="3">3 TON</option>
+    <option value="4">4 TON</option>
+    <option value="5">5 TON</option>
+  </select>
+<input TYPE="TEXT" SIZE="20" NAME="quantity" placeholder="please type here again">
+</p>
+<p><b>ADDRESS:</b> <input TYPE="TEXT" SIZE="20" NAME="address"  placeholder="enter your address"></p>
+<p><b>CONFIRM_ADDRESS:</b> 
+<textarea NAME="adress" TYPE="TEXT" rows="10" cols="30" placeholder="cofirm your address">
+</textarea>
+</p>
+<p><b>TRANSPOTER:</b><p/>
+<p> 
+<label for="TRANSPOTER"></label>
+  <select id="TRANSPOTER" NAME="transpoter">
+    <option value="1"> Transpoter-1</option>
+    <option value="2">Transpoter-2</option>
+    <option value="3">Transpoter-3</option>
+    <option value="4">Transpoter-4</option>
+    <option value="5">Transpoter-5</option>
+  </select>
+<input TYPE="TEXT" SIZE="20" NAME="transpoter" placeholder="please type here again">
+</p>
+<p><input TYPE="BUTTON" VALUE="Send" onClick="display();"></p>
+</form>
+<a href="remove.html"><button>Back To Home</button></a>
+</body>
+</html>
+
